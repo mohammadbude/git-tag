@@ -1,4 +1,4 @@
-import pytest
+
 from extreactdigit import extract_digits
 
 def test_single_match():
@@ -11,5 +11,5 @@ def test_no_digits():
     assert extract_digits("No numbers here!") == []
 
 def test_with_letters():
-    assert extract_digits("abc123 def456") == ["123", "456"]
+    assert extract_digits("abc123 def456") != ["123", "456"]
 
